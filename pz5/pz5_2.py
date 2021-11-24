@@ -2,18 +2,15 @@
 # ( А, В, С - вещ. параметры, явл. одновременно входными и выходными). С помощью этой функции выполный левый циклический сдвиг для двух данных паборов из трех чисел (A1, B1, C1) u (A2, B2, C2).
 
 
-import random
+a = int(input('Ввести число а '))
+b = int(input('Ввести число b '))
+c = int(input('Ввести число c '))
 
-
-a = random.randrange(99, 999)
-b = random.randrange(99, 999)
-c = random.randrange(99, 999)
-
-print(a, b, c)
-num = a, b, c
-c, b, a = a, c, b
 def num(a, b, c):
-    return c, b, a
+    a, b, c = c, a, b
+    return c, a, b
 
-print(num())
+
+print('Операция с чикличиским сдвигом', num(a, b, c))
+
 
